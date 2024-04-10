@@ -70,13 +70,6 @@
     color: rgba(0, 0, 0, 0.5);
 }
 
-/* 分类 排行榜 暂未使用 */
-/* .charts{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-} */
-
 .poplist {
     padding: 10px;
     text-align: center;
@@ -93,4 +86,9 @@
     border-radius: 10px;
     padding: 10px 20px;
     background-color: #c4c1c1;
+}
+
+.poplist .active {
+    background-color: #f5cb3b;
+    color: #fff;
 }

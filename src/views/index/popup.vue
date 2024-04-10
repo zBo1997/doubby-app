@@ -5,12 +5,7 @@
             <div class="poplist">
                 <h4>热门分类</h4>
                 <ul>
-                    <li>首页</li>
-                    <li>爽文</li>
-                    <li>男生</li>
-                    <li>女生</li>
-                    <li>女生</li>
-                    <li>武侠</li>
+                    <li v-for="(v, i) in popuplist" :key="i" @click="n = i" :class="n == i ? 'active' : ''">{{ v }}</li>
                 </ul>
             </div>
         </van-popup>
@@ -23,6 +18,12 @@ const show = ref(false)
 const showPopup = () => {
     show.value = true
 }
+const popuplist = ref([
+    "首页", "都市", "历史", '游戏', '悬疑'
+])
+// 点击常量，点击以后变换动态绑定对应样式
+const n = ref(0)
+
 </script>
   
   
