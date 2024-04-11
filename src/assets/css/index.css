@@ -3,6 +3,11 @@
     --select-color: #000000;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* 底部导航 */
 .footer {
     height: 60px;
@@ -13,14 +18,16 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     border-top: 3px solid #eee;
 }
+
 .footer-list {
     max-width: 1080px;
     height: 80px;
     margin: auto;
 }
+
 .footer-list ul {
     display: flex;
     justify-content: space-around;
@@ -33,6 +40,7 @@
 .footer-list i {
     font-size: 20px;
 }
+
 .selected {
     color: var(--select-color);
 }
@@ -58,7 +66,7 @@
 
 .header-search input::placeholder,
 .header-search {
-    color: #ffffff;
+    color: #948b8b;
 }
 
 .header-tabs {
@@ -74,21 +82,113 @@
     padding: 10px;
     text-align: center;
 }
+
 .poplist h4 {
     padding: 10px;
 }
+
 .poplist ul {
     gap: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 .poplist ul li {
     border-radius: 10px;
     padding: 10px 20px;
-    background-color: #c4c1c1;
+    background-color: #ffffff;
 }
 
 .poplist .active {
     background-color: #f5cb3b;
     color: #fff;
+}
+
+/* chatrstab 以下市tab标签页的样式 */
+.chatrstab .van-tabs {
+    overflow-x: auto;
+    /* 渐变消失的样式 */
+    -webkit-mask: linear-gradient(90deg, #000 80%, transparent);
+}
+
+.chatrstab .van-tab {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    margin: 0 6px;
+    white-space: nowrap;
+}
+
+.chatrstab .van-tabs--line .van-tabs__wrap {
+    height: 35px;
+}
+
+.chatrstab .van-tabs__line {
+    background: transparent;
+}
+
+.chatrstab .van-tab--active {
+    background: transparent;
+    border: #000000 1px solid;
+}
+
+.chatrstab-content {
+    display: flex;
+    height: 310px;
+    overflow-x: auto;
+}
+
+.chatrstab-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* 创建样式计数器用来对每一个item进行设置数字 后面使用‘.chatrstab-title::before’ 进行自增累加 */
+    counter-reset: count;
+}
+
+.chatrstab-list {
+    display: flex;
+    width: 200px;
+    height: 65px;
+    margin: 6px;
+}
+
+/* tab中图片大小设置 */
+.chatrstab-img {
+    width: 50%;
+}
+
+.chatrstab-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.chatrstab-title {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.chatrstab-title p {
+    color: #999;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* 添加一个伪元素(实现计数器) */
+.chatrstab-title::before {
+    counter-increment: count;
+    content: counter(count);
+    position: absolute;
+    top: 5;
+    left: -20px;
+}
+
+/* 选中前三个梳理 */
+.chatrstab-list:nth-child(-n+3) .chatrstab-title::before {
+    color: red;
+    font-size: 20px;
 }

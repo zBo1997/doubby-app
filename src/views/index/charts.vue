@@ -3,7 +3,6 @@
 
 
         <van-sticky>
-            <!-- <h3>排行榜</h3> -->
             <Popup />
         </van-sticky>
 
