@@ -17,7 +17,7 @@ const abc = ref('首页')
 <style>
 ::-webkit-scrollbar {
   /*隐藏滚轮*/
-  display: none;
+  /* display: none; */
 }
 
 ::-webkit-scrollbar {

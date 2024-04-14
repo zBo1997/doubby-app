@@ -3,9 +3,8 @@
         <Header />
         <Charts />
         <Chartstab />
-    </div>
-    <div style="height: 1000px;">
-
+        <Banner />
+        <Recommend />
     </div>
 </template>
   
@@ -13,6 +12,8 @@
 import Header from "./header.vue"
 import Charts from "./charts.vue"
 import Chartstab from "./chartstab.vue"
+import Banner from "./banner.vue"
+import Recommend from "./recommend.vue"
 import { ref } from 'vue'
 
 
