@@ -1,11 +1,6 @@
 <template>
     <div class="charts">
-
-
-        <van-sticky>
-            <Popup />
-        </van-sticky>
-
+        <Popup />
     </div>
 </template>
   

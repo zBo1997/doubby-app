@@ -9,6 +9,11 @@
     padding: 0;
 }
 
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* 底部导航 */
 .footer {
     height: 60px;
@@ -19,13 +24,14 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 60px;
     border-top: 3px solid #eee;
+    background-color: #eee;
 }
 
 .footer-list {
     max-width: 1080px;
-    height: 80px;
+    height: 60px;
     margin: auto;
 }
 
@@ -48,7 +54,7 @@
 
 /* 搜索框样式 */
 .header-search {
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 10px;
 }
 
@@ -67,7 +73,7 @@
 
 .header-search input::placeholder,
 .header-search {
-    color: #948b8b;
+    color: #b12828;
 }
 
 .header-tabs {
@@ -212,16 +218,21 @@
     padding: 10px;
 }
 
+.recommend-list {
+    margin-top: 10px;
+}
+
 .recommend-like {
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding: 10px 0px;
 }
 
 .recommend-like h3::before {
     content: "";
     width: 75px;
-    height: 5px;
+    height: 6px;
     background: linear-gradient(transparent, var(--bgcolor));
     position: absolute;
     bottom: 0px;
@@ -242,4 +253,34 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
+}
+
+.recommend-title {
+    width: 70%;
+}
+
+.recommend-title h4 {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 30px;
+}
+
+.recommend-title p {
+    color: #999;
+    font-size: 12px;
+}
+
+.recommend-title-author {
+    height: 20px;
+}
+
+/* 内容溢出隐藏*/
+.recommend-title-desc {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }

@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <Header />
+        <van-sticky>
+            <Header />
+        </van-sticky>
         <Charts />
         <Chartstab />
         <Banner />

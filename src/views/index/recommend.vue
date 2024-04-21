@@ -6,34 +6,16 @@
         </div>
         <div class="recommend-list">
             <ul>
-                <li>
+                <li v-for="(v, i) in recommendList" :key="i">
                     <div class="recommend-img">
-                        <img src="/src/assets/images/1.jpeg">
+                        <img :src="`/src/assets/images/${v.img_url}`">
                     </div>
-                    <div class="">
-                        <h4>你好</h4>
-                        <p>作者名字</p>
-                        <p>内容展示</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="recommend-img">
-                        <img src="/src/assets/images/3.jpeg">
-                    </div>
-                    <div class="">
-                        <h4>你好</h4>
-                        <p>作者名字</p>
-                        <p>内容展示</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="recommend-img">
-                        <img src="/src/assets/images/4.jpeg">
-                    </div>
-                    <div class="">
-                        <h4>你好</h4>
-                        <p>作者名字</p>
-                        <p>内容展示</p>
+                    <div class="recommend-title">
+                        <h4>{{ v.title }}</h4>
+                        <p class="recommend-title-author">{{ v.author }}</p>
+                        <p class="recommend-title-desc">
+                            {{ v.desc }}
+                        </p>
                     </div>
                 </li>
             </ul>
@@ -43,6 +25,13 @@
   
 <script setup>
 import { ref } from 'vue'
+let recommendList = ref([
+    { title: "我是标题", img_url: "1.jpeg", author: "作者名字", desc: "内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示" },
+    { title: "我是标题", img_url: "2.jpeg", author: "作者名字", desc: "内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示" },
+    { title: "我是标题", img_url: "3.jpeg", author: "作者名字", desc: "内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示" },
+    { title: "我是标题", img_url: "6.jpeg", author: "作者名字", desc: "内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示" },
+    { title: "我是标题", img_url: "4.jpeg", author: "作者名字", desc: "内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示" }
+])
 
 </script>
   
