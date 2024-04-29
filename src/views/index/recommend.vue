@@ -2,7 +2,7 @@
     <div class="recommend">
         <div class="recommend-like">
             <h3>为你推荐</h3>
-            <p>设置喜好</p>
+            <Like/>
         </div>
         <div class="recommend-list">
             <ul>
@@ -25,6 +25,7 @@
   
 <script setup>
 import { ref } from 'vue'
+import Like from "./like.vue"
 let recommendList = ref([
     { title: "我是标题", img_url: "1.jpeg", author: "作者名字", desc: "内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示" },
     { title: "我是标题", img_url: "2.jpeg", author: "作者名字", desc: "内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示,内容展示" },
