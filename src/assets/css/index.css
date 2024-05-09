@@ -206,6 +206,7 @@ li {
     padding: 10px;
     border-radius: 10px;
 }
+
 .banner img {
     width: 100%;
     height: 200px;
@@ -226,16 +227,17 @@ li {
     display: flex;
     justify-content: space-between;
     position: relative;
+    align-items: center;
     padding: 10px 0px;
 }
 
 .recommend-like h3::before {
     content: "";
     width: 75px;
-    height: 6px;
+    height: 10px;
     background: linear-gradient(transparent, var(--bgcolor));
     position: absolute;
-    bottom: 0px;
+    bottom: 15px;
     left: 0px;
 }
 
@@ -243,6 +245,7 @@ li {
     display: flex;
     justify-content: space-between;
     height: 120px;
+    margin-bottom: 20px
 }
 
 .recommend-img {
@@ -283,4 +286,38 @@ li {
     overflow: hidden;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+}
+
+
+/* 弹出层样式 */
+.like-list {
+    padding: 35px 15px;
+}
+
+.like-list h4 {
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.like-list p {
+    font-weight: 600;
+}
+
+.like-list ul {
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.like-list ul li {
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 25%;
+    padding: 20px 20px;
+}
+/* 选中的按钮 */
+.like-list .addclass {
+
 }
