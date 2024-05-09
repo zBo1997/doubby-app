@@ -1,4 +1,8 @@
 <template>
+    <!-- 开屏壁纸 -->
+    <div class="spread">
+        <span>点击跳转</span>
+    </div>
     <div class="container">
         <van-sticky>
             <Header />

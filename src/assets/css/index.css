@@ -237,7 +237,7 @@ li {
     height: 10px;
     background: linear-gradient(transparent, var(--bgcolor));
     position: absolute;
-    bottom: 15px;
+    bottom: 6px;
     left: 0px;
 }
 
@@ -317,7 +317,24 @@ li {
     border-radius: 25%;
     padding: 20px 20px;
 }
+
 /* 选中的按钮 */
 .like-list .addclass {
+    background-color: #fbf2eb;
+    color: #e2784d;
+}
 
+/* 开屏壁纸 */
+.spread {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/open_ground.jpg) no-repeat top center;
+    background-size: cover;
+    z-index: 999;
+}
+
+.spread span{
+    
 }
