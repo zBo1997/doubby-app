@@ -335,6 +335,14 @@ li {
     z-index: 999;
 }
 
-.spread span{
-    
+.spread .jump {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: #eee;
+}
+
+.spread .jump b {
+    margin-left: 10px;
+    color: #eee;
 }
